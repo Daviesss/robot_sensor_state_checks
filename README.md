@@ -46,7 +46,7 @@ robot_sensorstate_checks/
 
 ## Requirements
 
-- ROS 2 (Humble or later) — environment must be sourced before running
+- ROS 2 (Humble or later)  environment must be sourced before running
 - Python 3.10+
 - pytest
 
