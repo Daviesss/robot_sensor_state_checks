@@ -188,4 +188,5 @@ Those tools display information ...they require a human watching a terminal. Thi
 MIT
 
 # TODO:
-A config YAML file so users can set topic names, rate thresholds, and timeouts without touching the Python files
+- A config YAML file so users can set topic names, rate thresholds, and timeouts without touching the Python files
+- Command line arguments to select which topics to test
