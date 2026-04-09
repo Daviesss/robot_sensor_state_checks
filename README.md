@@ -82,6 +82,7 @@ python3 -m pytest test_sensor_topics.py -v
 cd robot_sensor_state_checks/robot_sensorstate_checks/robot_sensorstate_checks
 python3 -m pytest test_state_topics.py -v
 ```
+![State checks](images/state_checks.png)
 
 ### Run All Tests
 
