@@ -66,7 +66,7 @@ source /opt/ros/<distro>/setup.bash
 
 ## Running the Tests
 
-> **The simulation must be running before you execute the tests.** Launch your Gazebo world and robot stack first, then run the suite.
+> **The simulation/robot with the required sensors must be running before you execute the tests.** Launch your Gazebo world and robot stack first, then run the suite.
 
 ### Test Sensor Topics
 
