@@ -186,3 +186,6 @@ Those tools display information ...they require a human watching a terminal. Thi
 ## License
 
 MIT
+
+# TODO:
+A config YAML file so users can set topic names, rate thresholds, and timeouts without touching the Python files
