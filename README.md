@@ -13,8 +13,8 @@
 ## Package Structure
 
 ```
-robot_sensor_state_checks/
-└── robot_sensor_state_checks/
+robot_sensorstate_checks/
+└── robot_sensorstate_checks/
     ├── test_sensor_topics.py   # Sensor topic tests
     └── test_state_topics.py    # State topic tests
 ```
