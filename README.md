@@ -74,6 +74,7 @@ source /opt/ros/<distro>/setup.bash
 cd robot_sensor_state_checks/robot_sensorstate_checks/robot_sensorstate_checks
 python3 -m pytest test_sensor_topics.py -v
 ```
+![Sensor checks](images/sensor_checks.png)
 
 ### Test State Topics
 
