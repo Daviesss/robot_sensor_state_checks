@@ -139,6 +139,44 @@ Gazebo depth cameras publish as `32FC1` (32-bit float, metres). Real hardware (R
 
 ---
 
+## Testing on Real Hardware
+
+The test suite works on real hardware with no code changes, provided your topics match the names defined in `TOPIC_CONFIG`.
+
+### Steps
+
+1. Source your ROS 2 environment and bring up your robot stack as normal
+2. Verify your topics are live:
+
+```bash
+ros2 topic list
+```
+
+3. Run the tests:
+
+```bash
+cd robot_sensor_state_checks/robot_sensorstate_checks/robot_sensorstate_checks
+python3 -m pytest test_sensor_topics.py test_state_topics.py -v
+```
+
+### Differences from Simulation
+
+- `test_odom_covariance_not_all_zero` this test **will run and assert** on real hardware. Real odometry should have non-zero covariance values. If it fails, your odometry source is not populating covariance.
+- IMU covariance tests will also fully assert , ensure your IMU driver populates covariance or sets the REP-145 sentinel (`covariance[0] = -1.0`).
+
+### If Your Topic Names Differ
+
+Update `TOPIC_CONFIG` at the top of each test file to match your hardware's topic names:
+
+```python
+TOPIC_CONFIG = {
+    "scan": {
+        "topic": "/your/scan/topic",   # change this
+        ...
+    },
+}
+```
+
 ## Why Not Just Use `ros2 topic hz` or `ros2 doctor`?
 
 Those tools display information ...they require a human watching a terminal. This suite **asserts** conditions and **fails the pipeline automatically** if something is misconfigured or broken. It is the difference between a dashboard you check manually and a gate that blocks a bad merge.
