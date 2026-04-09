@@ -55,6 +55,13 @@ robot_sensorstate_checks/
 ```bash
 pip install pytest
 ```
+
+### Source your ROS 2 environment
+
+```bash
+source /opt/ros/<distro>/setup.bash
+```
+
 ### Clone into your ROS 2 workspace
 
 ```bash
@@ -68,12 +75,6 @@ git clone https://github.com/Daviesss/robot_sensor_state_checks.git
 cd ~/ros2_ws
 colcon build --packages-select robot_sensorstate_checks
 source install/setup.bash
-```
-
-### Source your ROS 2 environment
-
-```bash
-source /opt/ros/<distro>/setup.bash
 ```
 
 ---
