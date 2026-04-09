@@ -105,6 +105,15 @@ python3 -m pytest test_state_topics.py -v
 python3 -m pytest test_sensor_topics.py test_state_topics.py -v
 ```
 
+### Run via Shell Script
+
+A convenience script is provided to source the environment and run all tests in one step:
+
+```bash
+cd robot_sensor_state_checks/robot_sensorstate_checks
+chmod +x run_tests.sh
+bash run_tests.sh
+```
 
 ---
 
